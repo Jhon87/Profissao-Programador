@@ -1,0 +1,446 @@
+@import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap');/*fontes do site batman*/
+
+/*Configuração da página index.html*/
+* {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    list-style: none;
+    text-decoration: none;
+}
+
+header{
+    height: 90px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav{
+    width: 60%;
+}
+
+ul{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+li{
+    list-style: none;
+    color: aliceblue;
+    cursor: pointer;
+    font-size: 19px;
+    transition: .05s;
+    font-family: 'Kdam Thmor Pro', sans-serif;
+}
+/*configura o estilo de mudar a cor quando passa o mouse */
+li:hover{
+    color: #D21617;
+}
+
+#logo{
+    width: 100px;
+    height: auto;
+}
+
+#banner{
+    background-image: url('https://pbs.twimg.com/media/FBwJWeQXIAItfyH.jpg:large');
+    background-position: 50% 50%;
+    background-size: cover;
+    width: 100%;
+    height: 600px;
+}
+
+#trailer-container{
+    width: 100%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+}
+
+.content{
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.trailer{
+    width: 50%;
+}
+
+#sinopse{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 30px;
+}
+
+.description{
+    color: #fff;
+    font-size: 19px;
+    font-family: 'Kdam Thmor Pro', sans-serif;
+    width: 70%;
+}
+
+.button{
+    width: 200px;
+    height: 60px;
+    background-color: #D21617;
+    color: #fff;
+    padding: 8px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .8s;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    border: none;
+    outline: none;
+    margin-top: 25px;
+}
+
+.button:hover{
+    background-color: #fff;
+    color: #000;
+}
+
+.actor-cards-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 50p;
+}
+/*Configuração dos cards em 3 colunas*/
+.cards-content{
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    row-gap: 20px;
+    column-gap: 40px;    
+}
+
+.card{
+    width: 100%;
+    height: 600px;
+    background-size: cover;
+    background-position: 50% 50%;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 1s;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 0 0 20px 10px;
+    color: #fff;
+    font-size: 17px;
+    font-family: 'Kdam Thmor Pro', sans-serif;
+
+}
+
+.card:hover{
+    transform: scale(1.02);
+}
+
+.banner-1{
+    background-image: url('https://noticiasdatv.uol.com.br/media/uploads/artigos_2021/batman-robert-pattinson-foto-divulgacao-warner-bros.jpg');
+}
+
+.banner-2{
+    background-image: url('https://akns-images.eonline.com/eol_images/Entire_Site/2022122/rs_634x1024-220222122542-634-Zoe_Kravitz-the_batman-catwoman-gj.jpg?fit=around%7C634:1024&output-quality=90&crop=634:1024;center,top');
+}
+
+.banner-3{
+    background-image: url('https://2.bp.blogspot.com/-N9DtMsBCAwI/XbtdLT8foBI/AAAAAAACzVU/bTyfrBq-ApwVG8DUfRmWYVlvKyzXJ-08wCK4BGAYYCw/s1600/jeffreywrights.jpg');
+}
+
+footer{
+    height: 300px;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+span{
+    color: #fff;
+    font-family: 'Kdam Thmor Pro', sans-serif;
+}
+
+.footer-navigation{
+    display: none;
+}
+
+.footer-list{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/*Configuração para dispositivos mobile*/
+@media(max-width: 768px){
+    .footer-navigation{
+        display: block;
+    }
+    nav{
+        display: none;
+    }
+
+    #banner{
+        background-position: 40%;
+    }
+
+    #trailer-container{
+        width: 100%;
+        height: 400px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .content{
+        width: 95%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .trailer{
+        width: 100%;
+    }
+
+    #sinopse{
+        width: 95%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .description{
+        width: 100%;
+    }
+
+    .button{
+        width: 100%;
+        margin-top: 30px;
+    }
+
+    .cards-content{
+        grid-template-columns: 1fr;
+        margin-top: 150px;
+    }
+
+}
+
+/*Começa a configuração da página fotos*/
+
+.content-fotos{
+    width: 100%;
+    height: 600px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.navigation-fotos{
+    position:absolute;
+    bottom: -60px;
+    left: 50%;
+    transform: translate(-50%);
+    display: flex;
+}
+
+.label-fotos{
+    width: 20px;
+    height: 5px;
+    border: 2px solid #fff;
+    margin: 6px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .05s;
+}
+
+.label-fotos:hover {
+    background-color: #D21617;
+}
+
+.input-fotos{
+    display: none;
+}
+
+.slides{
+    display: flex;
+    width: 500%;
+    height: 100%;
+}
+
+.slide{
+    width: 20%;
+    transition: .05s;
+}
+
+.slide img{
+    width: 100%;
+    height: 100%;
+}
+
+#slide1:checked ~ .s1{
+    margin-left: 0;
+}
+
+#slide2:checked ~ .s1{
+    margin-left: -20%;
+}
+
+#slide3:checked ~ .s1{
+    margin-left: -40%;
+}
+
+#slide4:checked ~ .s1{
+    margin-left: -60%;
+}
+
+#slide5:checked ~ .s1{
+    margin-left: -80%;
+}
+
+/*A partir daqui é configuração dos Comentários*/
+
+.card-comentario .user{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+.star{
+    width: 20px;
+
+}
+
+p, h1,h3{
+    color: #fff;
+    font-family: 'Kdam Thmor Pro', sans-serif;
+}
+
+h1{
+    display: flex;
+    justify-content: center;
+    margin: 5rem 0 5rem 0;
+    font-family: 'Kdam Thmor Pro', sans-serif;
+    font-size: 40px;
+
+}
+
+.cards-comentarios{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    max-width: 980px;
+    margin: 0 auto;
+    grid-gap: 40px;
+}
+
+.card-comentario{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 6px 6px 10px rgba(255, 255, 255, 0.644);
+    margin-bottom: 15px;
+}
+
+.card-comentario h3{
+    margin-bottom: 5px;
+}
+
+.card-comentario p{
+    margin-top: 20px;
+    text-align: center;
+    font-size: 18px;
+}
+
+/*Começa a configuração da página Contato*/
+
+.div-contato{
+    display: flex;
+    justify-content: center;
+}
+.contato-h1{
+    font-size: 3rem;
+    color: #fff;
+    margin-bottom: 2rem;
+    text-align: center;
+    line-height: 1.2;
+}
+
+.contato-h1::before{
+    content: "📧";
+    display: block;
+}
+
+.form-contato{
+    width: 100%;
+    max-width: 32rem;
+    font-size: 1.125rem;
+
+}
+
+.form-contato button{
+    display: block;
+    padding: 1rem;
+    background: #D21617;
+    color: #fff;
+    font-family: 'Kdam Thmor Pro', sans-serif;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.form-contato button:hover,
+.form-contato button:focus{
+    outline: none;
+    background-color: #fff;
+    color: #000;
+}
+
+.form-contato label,
+.form-contato  input,
+.form-contato  textarea,
+.form-contato  button{
+    display: block;
+    width: 100%;
+    align-items: center;
+    
+}
+
+.form-contato  label{
+    color: #fff;
+    line-height: 1;
+    margin-bottom: 0.5rem;
+}
+
+.form-contato  input,
+.form-contato  textarea{
+    font-family: 'Kdam Thmor Pro', sans-serif;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    background-color: #fff;
+    transition: border-color,
+    box-shadow 0.2s;
+}
+
+.form-contato textarea{
+    min-height: 13rem;
+    resize: vertical;
+}
+
+.form-contato input:hover,
+.form-contato input:focus,
+.form-contato textarea:hover,
+.form-contato textarea:focus{
+    outline: none;
+    border-color: #D21617;
+    box-shadow: 0 0 0 3px #D21617;
+}
